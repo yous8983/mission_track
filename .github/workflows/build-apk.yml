@@ -22,7 +22,6 @@ jobs:
       - run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - run: npx cap add android
       - run: npx cap sync android
-
       - name: Copy icons into Android project
         run: |
           for density in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
@@ -31,15 +30,11 @@ jobs:
                android/app/src/main/res/mipmap-$density/ic_launcher.png
             cp android-icons/mipmap-$density/ic_launcher_round.png \
                android/app/src/main/res/mipmap-$density/ic_launcher_round.png
-            echo "Copied $density icons"
           done
-          ls android/app/src/main/res/mipmap-xxxhdpi/
-
       - name: Build APK
         run: |
           chmod +x android/gradlew
           cd android && ./gradlew assembleDebug --no-daemon
-
       - uses: actions/upload-artifact@v4
         with:
           name: MissionTrack-APK
