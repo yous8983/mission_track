@@ -1,0 +1,167 @@
+/* src/pages/StatistiquesPage.css */
+.stats-content { --background: var(--mt-bg); }
+
+.stats-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--mt-surface);
+  border-bottom: 1px solid var(--mt-border);
+  padding: 12px 8px;
+}
+
+.stats-kpi {
+  text-align: center;
+  padding: 4px 0;
+}
+
+.stats-kpi-val {
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.stats-kpi-lbl {
+  font-size: 9px;
+  color: var(--mt-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* Chart */
+.chart-card {
+  margin: 12px;
+  background: var(--mt-surface);
+  border: 1px solid var(--mt-border);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.chart-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mt-text);
+  margin-bottom: 6px;
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--mt-text-sub);
+  margin-bottom: 12px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.chart-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.chart-scroll::-webkit-scrollbar { height: 3px; }
+.chart-scroll::-webkit-scrollbar-track { background: var(--mt-bg); }
+.chart-scroll::-webkit-scrollbar-thumb { background: var(--mt-text-muted); border-radius: 2px; }
+
+.chart-empty {
+  text-align: center;
+  color: var(--mt-text-muted);
+  padding: 24px;
+  font-size: 13px;
+}
+
+/* Month detail popup */
+.month-detail {
+  margin-top: 12px;
+  background: var(--mt-bg);
+  border: 1px solid var(--mt-text-muted);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.month-detail-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mt-text);
+  margin-bottom: 8px;
+}
+
+.month-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 12px;
+  color: var(--mt-text-sub);
+  border-bottom: 1px solid var(--mt-border);
+}
+
+.month-detail-row:last-of-type { border-bottom: none; }
+
+/* Export */
+.export-card {
+  margin: 8px 12px;
+  background: var(--mt-surface);
+  border: 1px solid var(--mt-border);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.export-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mt-text);
+  margin-bottom: 6px;
+}
+
+.export-desc {
+  font-size: 12px;
+  color: var(--mt-text-sub);
+  line-height: 1.5;
+}
+
+.export-hint {
+  font-size: 11px;
+  color: var(--mt-text-muted);
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Months list */
+.months-card {
+  margin: 8px 12px;
+  background: var(--mt-surface);
+  border: 1px solid var(--mt-border);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.month-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--mt-border);
+}
+
+.month-row:last-child { border-bottom: none; }
+
+.month-row-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mt-text);
+  margin-bottom: 2px;
+}
+
+.month-row-sub {
+  font-size: 12px;
+}

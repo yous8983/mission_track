@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2535"/>
+      <stop offset="100%" style="stop-color:#0f1923"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2f80ed"/>
+      <stop offset="100%" style="stop-color:#1a5fb4"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60"/>
+      <stop offset="100%" style="stop-color:#2ecc71"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="110" ry="110" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="80" y1="170" x2="432" y2="170" stroke="#2d3f55" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.6"/>
+  <line x1="80" y1="256" x2="432" y2="256" stroke="#2d3f55" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.6"/>
+  <line x1="80" y1="342" x2="432" y2="342" stroke="#2d3f55" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.6"/>
+
+  <!-- Bar chart — 5 bars -->
+  <!-- Bar 1 (low) -->
+  <rect x="88" y="302" width="52" height="72" rx="8" fill="#2d3f55" opacity="0.8"/>
+  <rect x="88" y="302" width="52" height="72" rx="8" fill="url(#accent)" opacity="0.4"/>
+
+  <!-- Bar 2 (medium) -->
+  <rect x="158" y="242" width="52" height="132" rx="8" fill="url(#accent)" opacity="0.6"/>
+
+  <!-- Bar 3 (high — highlighted) -->
+  <rect x="228" y="158" width="52" height="216" rx="8" fill="url(#accent)" filter="url(#glow)"/>
+
+  <!-- Bar 4 (medium-high) -->
+  <rect x="298" y="202" width="52" height="172" rx="8" fill="url(#accent)" opacity="0.75"/>
+
+  <!-- Bar 5 (high-green = done/ok) -->
+  <rect x="368" y="178" width="52" height="196" rx="8" fill="url(#green)"/>
+
+  <!-- Trend line over bars -->
+  <polyline
+    points="114,286 184,226 254,152 324,192 394,168"
+    fill="none"
+    stroke="#ecf0f1"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.9"
+  />
+
+  <!-- Dots on trend line -->
+  <circle cx="114" cy="286" r="7" fill="#ecf0f1"/>
+  <circle cx="184" cy="226" r="7" fill="#ecf0f1"/>
+  <circle cx="254" cy="152" r="9" fill="#2f80ed" stroke="#ecf0f1" stroke-width="3"/>
+  <circle cx="324" cy="192" r="7" fill="#ecf0f1"/>
+  <circle cx="394" cy="168" r="9" fill="#27ae60" stroke="#ecf0f1" stroke-width="3"/>
+
+  <!-- Checkmark badge bottom-right -->
+  <circle cx="390" cy="390" r="52" fill="#27ae60"/>
+  <polyline
+    points="368,392 383,408 414,374"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Bottom label -->
+  <text
+    x="256" y="468"
+    text-anchor="middle"
+    font-family="'SF Pro Display', -apple-system, sans-serif"
+    font-size="36"
+    font-weight="800"
+    letter-spacing="3"
+    fill="#ecf0f1"
+    opacity="0.95"
+  >MISSIONTRACK</text>
+</svg>

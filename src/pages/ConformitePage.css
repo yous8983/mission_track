@@ -1,0 +1,37 @@
+/* src/pages/ConformitePage.css */
+.conformite-content { --background: var(--mt-bg); }
+.no-mission-msg { text-align: center; color: var(--mt-text-muted); padding: 60px 32px; font-size: 16px; }
+
+.score-card { margin: 12px; background: var(--mt-surface); border: 1px solid var(--mt-border); border-radius: 12px; box-shadow: none; }
+.score-row { display: flex; align-items: center; justify-content: space-between; }
+.score-label { font-size: 11px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+.score-value { font-size: 36px; font-weight: 800; line-height: 1; }
+.score-sub { font-size: 12px; color: var(--mt-text-sub); margin-top: 4px; }
+.mission-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 8px; margin-top: 8px; }
+
+.conform-card { margin: 8px 12px; background: var(--mt-surface); border: 1px solid var(--mt-border); border-radius: 10px; box-shadow: none; }
+.conform-header { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+.conform-icon-wrap { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.conform-info { flex: 1; }
+.conform-title { font-size: 15px; font-weight: 700; color: var(--mt-text); margin-bottom: 3px; }
+.conform-desc { font-size: 12px; color: var(--mt-text-sub); line-height: 1.4; }
+
+.status-buttons { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.status-btn {
+  background: var(--mt-bg); border: 1px solid var(--mt-text-muted); color: var(--mt-text-sub);
+  border-radius: 20px; padding: 5px 12px; font-size: 12px; cursor: pointer;
+  transition: all 0.15s; font-family: inherit;
+}
+
+.preuve-section { margin-top: 4px; }
+.preuve-label { font-size: 10px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+.preuve-input {
+  width: 100%; background: var(--mt-bg); border: 1px solid var(--mt-border); color: var(--mt-text);
+  border-radius: 6px; padding: 8px 10px; font-size: 12px; font-family: inherit;
+  resize: vertical; min-height: 52px; outline: none;
+}
+.preuve-input:focus { border-color: var(--mt-text-muted); }
+
+.remind-card { margin: 8px 12px; background: var(--mt-surface2); border: 1px solid var(--mt-text-muted); border-radius: 10px; box-shadow: none; }
+.remind-title { font-size: 13px; font-weight: 600; color: var(--mt-text); margin-bottom: 6px; }
+.remind-text { font-size: 12px; color: var(--mt-text-sub); line-height: 1.5; }

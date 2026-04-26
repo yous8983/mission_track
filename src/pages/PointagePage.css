@@ -1,0 +1,97 @@
+/* src/pages/PointagePage.css */
+.pointage-content { --background: var(--mt-bg); }
+
+.no-mission {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 60vh; text-align: center; padding: 32px;
+}
+.empty-icon { font-size: 48px; margin-bottom: 16px; }
+.empty-title { font-size: 18px; font-weight: 700; color: var(--mt-text-muted); margin-bottom: 8px; }
+.empty-sub { font-size: 13px; color: var(--mt-text-muted); }
+
+.balances-bar {
+  display: flex;
+  background: var(--mt-surface);
+  border-bottom: 1px solid var(--mt-border);
+  padding: 10px 16px;
+  gap: 0;
+}
+.balance-item { flex: 1; text-align: center; display: flex; flex-direction: column; gap: 2px; }
+.balance-val { font-size: 18px; font-weight: 700; }
+.balance-lbl { font-size: 10px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.4px; }
+.balance-sep { width: 1px; background: var(--mt-border); margin: 4px 0; }
+
+.week-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 4px 8px; background: var(--mt-surface); border-bottom: 1px solid var(--mt-border);
+}
+.week-label { font-size: 13px; font-weight: 600; color: var(--mt-text); letter-spacing: 0.3px; }
+
+.summary-card {
+  margin: 12px; border-radius: 12px; background: var(--mt-surface);
+  border: 1px solid var(--mt-border); box-shadow: none;
+}
+.summary-card.ok { border-color: #27ae60; }
+.summary-card.warn { border-color: #c07000; }
+.summary-card.has-absence { border-color: var(--mt-orange); }
+
+.summary-row { display: flex; justify-content: space-between; align-items: flex-start; }
+.summary-sublabel { font-size: 11px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+.summary-total { font-size: 34px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+.summary-target { font-size: 11px; color: var(--mt-text-sub); margin-top: 4px; }
+.summary-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.repos-alert { font-size: 10px; color: var(--mt-orange); display: flex; align-items: center; gap: 4px; text-align: right; max-width: 140px; }
+
+.absence-chips { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+.chip-cp, .chip-rtt, .chip-sick {
+  font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+}
+.chip-cp { background: #3d2800; color: var(--mt-orange); }
+.chip-rtt { background: #1e1030; color: var(--mt-purple); }
+.chip-sick { background: #4d1010; color: var(--mt-red); }
+
+.color-ok { color: var(--mt-green); }
+.color-warn { color: var(--mt-orange); }
+
+.day-card {
+  margin: 8px 12px; border-radius: 10px; background: var(--mt-surface);
+  border: 1px solid var(--mt-border); border-left: 3px solid transparent;
+  box-shadow: none;
+}
+.day-card.today { background: var(--mt-surface2); }
+
+.day-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.day-title-row { display: flex; align-items: center; gap: 8px; }
+.day-name { font-size: 15px; font-weight: 700; color: var(--mt-text); }
+.small-badge { font-size: 10px; }
+.day-total { font-size: 15px; font-weight: 700; }
+
+/* Type selector */
+.type-selector {
+  display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap;
+}
+.type-btn {
+  background: var(--mt-bg); border: 1px solid var(--mt-text-muted); color: var(--mt-text-sub);
+  border-radius: 8px; padding: 5px 8px; font-size: 16px; cursor: pointer;
+  transition: all 0.15s; min-width: 36px; text-align: center;
+}
+.type-btn.selected { font-weight: 700; }
+
+.day-inputs {
+  display: grid; grid-template-columns: 1fr 1fr 80px; gap: 8px; margin-bottom: 8px;
+}
+.input-group { display: flex; flex-direction: column; }
+.input-label { font-size: 10px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+.time-input {
+  background: var(--mt-bg); border: 1px solid var(--mt-text-muted); color: var(--mt-text);
+  border-radius: 6px; padding: 7px 8px; font-size: 13px; width: 100%;
+  outline: none; font-family: 'DM Mono', monospace; -webkit-appearance: none;
+}
+.time-input:focus { border-color: var(--mt-accent); }
+
+.note-input {
+  background: var(--mt-bg); border: 1px solid var(--mt-border); color: var(--mt-text-sub);
+  border-radius: 6px; padding: 6px 10px; font-size: 12px; width: 100%;
+  outline: none; font-family: inherit;
+}
+.note-input:focus { border-color: var(--mt-text-muted); color: var(--mt-text); }

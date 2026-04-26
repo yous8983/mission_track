@@ -1,0 +1,60 @@
+name: Build MissionTrack APK
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React
+        run: npm run build
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Accept licenses
+        run: yes | sdkmanager --licenses || true
+
+      - name: Install SDK
+        run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+
+      - name: Add Capacitor Android
+        run: npx cap add android
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Copy app icons
+        run: |
+          for density in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
+            cp android-icons/mipmap-$density/ic_launcher.png \
+               android/app/src/main/res/mipmap-$density/ic_launcher.png
+            cp android-icons/mipmap-$density/ic_launcher_round.png \
+               android/app/src/main/res/mipmap-$density/ic_launcher_round.png
+          done
+          echo "Icons installed"
+
+      - name: Build APK
+        run: |
+          chmod +x android/gradlew
+          cd android && ./gradlew assembleDebug --no-daemon
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MissionTrack-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30

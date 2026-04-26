@@ -1,0 +1,243 @@
+/* MissionTrack — Design System v2 — Professionnel & Sobre */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Brand */
+  --mt-blue:      #2563EB;
+  --mt-blue-light:#3B82F6;
+  --mt-blue-dark: #1D4ED8;
+  --mt-green:     #16A34A;
+  --mt-green-light:#22C55E;
+  --mt-amber:     #D97706;
+  --mt-red:       #DC2626;
+  --mt-purple:    #7C3AED;
+
+  /* Neutrals — cool slate */
+  --mt-bg:        #0B1120;
+  --mt-bg2:       #111827;
+  --mt-surface:   #1A2235;
+  --mt-surface2:  #1F2D42;
+  --mt-surface3:  #263349;
+  --mt-border:    #2D3F5A;
+  --mt-border2:   #374B68;
+
+  /* Text */
+  --mt-text:      #F1F5F9;
+  --mt-text-2:    #CBD5E1;
+  --mt-text-3:    #94A3B8;
+  --mt-text-4:    #64748B;
+
+  /* Ionic overrides */
+  --ion-color-primary:          var(--mt-blue);
+  --ion-color-primary-rgb:      37,99,235;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade:    var(--mt-blue-dark);
+  --ion-color-primary-tint:     var(--mt-blue-light);
+
+  --ion-color-success:          var(--mt-green);
+  --ion-color-success-rgb:      22,163,74;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-shade:    #15803d;
+  --ion-color-success-tint:     var(--mt-green-light);
+
+  --ion-color-warning:          var(--mt-amber);
+  --ion-color-warning-rgb:      217,119,6;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-shade:    #b45309;
+  --ion-color-warning-tint:     #F59E0B;
+
+  --ion-color-danger:           var(--mt-red);
+  --ion-color-danger-rgb:       220,38,38;
+  --ion-color-danger-contrast:  #ffffff;
+  --ion-color-danger-shade:     #B91C1C;
+  --ion-color-danger-tint:      #EF4444;
+
+  --ion-color-medium:           var(--mt-text-3);
+  --ion-color-medium-rgb:       148,163,184;
+  --ion-color-medium-contrast:  #ffffff;
+}
+
+/* ── Global ── */
+body {
+  --ion-background-color:       var(--mt-bg);
+  --ion-background-color-rgb:   11,17,32;
+  --ion-text-color:             var(--mt-text);
+  --ion-text-color-rgb:         241,245,249;
+  --ion-border-color:           var(--mt-border);
+  --ion-item-background:        var(--mt-surface);
+  --ion-toolbar-background:     var(--mt-bg2);
+  --ion-tab-bar-background:     var(--mt-bg2);
+  --ion-tab-bar-border-color:   var(--mt-border);
+  --ion-card-background:        var(--mt-surface);
+  --ion-item-border-color:      var(--mt-border);
+  --ion-modal-background:       var(--mt-bg);
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Toolbar ── */
+ion-toolbar {
+  --background: var(--mt-bg2);
+  --border-color: var(--mt-border);
+  --color: var(--mt-text);
+  --min-height: 54px;
+}
+
+ion-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--mt-text);
+  letter-spacing: -0.2px;
+}
+
+/* ── Tab Bar ── */
+ion-tab-bar {
+  --background: var(--mt-bg2);
+  border-top: 1px solid var(--mt-border);
+  height: 60px;
+  padding-bottom: 4px;
+}
+
+ion-tab-button {
+  --color: var(--mt-text-4);
+  --color-selected: var(--mt-blue-light);
+}
+
+ion-tab-button ion-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+ion-tab-button ion-icon {
+  font-size: 20px;
+}
+
+/* ── Cards ── */
+ion-card {
+  --background: var(--mt-surface);
+  border: 1px solid var(--mt-border);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3) !important;
+  margin: 6px 12px;
+}
+
+ion-card-content {
+  padding: 16px;
+  color: var(--mt-text);
+}
+
+/* ── Modal ── */
+ion-modal {
+  --background: var(--mt-bg);
+  --border-radius: 20px;
+}
+
+ion-modal ion-toolbar {
+  --background: var(--mt-bg2);
+}
+
+/* ── Alert ── */
+ion-alert {
+  --background: var(--mt-surface2);
+  --backdrop-opacity: 0.8;
+  --min-width: 280px;
+}
+
+ion-alert .alert-wrapper {
+  border: 1px solid var(--mt-border2);
+  border-radius: 16px !important;
+}
+
+ion-alert .alert-title {
+  color: var(--mt-text) !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+ion-alert .alert-message {
+  color: var(--mt-text-3) !important;
+  font-size: 14px !important;
+}
+
+ion-alert .alert-button {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+/* ── Badges ── */
+ion-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+}
+
+/* ── FAB ── */
+ion-fab-button {
+  --background: var(--mt-blue);
+  --background-activated: var(--mt-blue-dark);
+  --box-shadow: 0 4px 24px rgba(37,99,235,0.5);
+  width: 52px;
+  height: 52px;
+}
+
+/* ── Inputs globaux ── */
+input, textarea, select {
+  background: var(--mt-bg) !important;
+  border: 1.5px solid var(--mt-border) !important;
+  color: var(--mt-text) !important;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--mt-blue-light) !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--mt-text-4) !important;
+  font-size: 13px;
+}
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--mt-border2); border-radius: 2px; }
+
+/* ── Monospace (heures, stats) ── */
+.mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-feature-settings: 'tnum';
+}
+
+/* ── Utility classes ── */
+.text-primary { color: var(--mt-text) !important; }
+.text-secondary { color: var(--mt-text-2) !important; }
+.text-muted { color: var(--mt-text-3) !important; }
+.text-faint { color: var(--mt-text-4) !important; }
+.text-blue { color: var(--mt-blue-light) !important; }
+.text-green { color: var(--mt-green-light) !important; }
+.text-amber { color: var(--mt-amber) !important; }
+.text-red { color: var(--mt-red) !important; }
+.text-purple { color: var(--mt-purple) !important; }
+
+.surface { background: var(--mt-surface) !important; }
+.surface2 { background: var(--mt-surface2) !important; }
+.border-subtle { border: 1px solid var(--mt-border) !important; }
+
+.badge-ok     { background: #14532d; color: #4ade80; border: 1px solid #166534; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+.badge-warn   { background: #451a03; color: #fbbf24; border: 1px solid #78350f; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+.badge-err    { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+.badge-blue   { background: #1e3a5f; color: #93c5fd; border: 1px solid #1d4ed8; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+.badge-purple { background: #2e1065; color: #c4b5fd; border: 1px solid #5b21b6; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; }

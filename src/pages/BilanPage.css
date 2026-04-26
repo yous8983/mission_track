@@ -1,0 +1,63 @@
+/* src/pages/BilanPage.css */
+.bilan-content { --background: var(--mt-bg); }
+.no-mission-msg { text-align: center; color: var(--mt-text-muted); padding: 60px 32px; font-size: 16px; }
+
+.mission-header { text-align: center; padding: 20px 16px 12px; }
+.mission-badge { display: inline-block; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 2px; padding: 3px 14px; border-radius: 20px; margin-bottom: 10px; }
+.mission-name { font-size: 20px; font-weight: 800; color: var(--mt-text); letter-spacing: 0.5px; }
+.mission-client { font-size: 14px; color: var(--mt-text-sub); margin-top: 2px; }
+.mission-period { font-size: 12px; color: var(--mt-text-muted); margin-top: 4px; }
+.mission-ref { font-size: 11px; color: var(--mt-text-muted); margin-top: 2px; }
+.mission-desc-block {
+  margin-top: 10px; padding: 10px 14px;
+  background: var(--mt-surface2); border: 1px solid var(--mt-text-muted);
+  border-radius: 8px; font-size: 13px; color: var(--mt-text-sub);
+  line-height: 1.5; text-align: left; max-width: 360px; margin-left: auto; margin-right: auto;
+}
+
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 0 12px 4px; }
+.kpi-card { background: var(--mt-surface); border: 1px solid var(--mt-border); border-radius: 10px; box-shadow: none; margin: 0; }
+.kpi-card ion-card-content { padding: 12px 8px; text-align: center; }
+.kpi-icon { font-size: 22px; margin-bottom: 6px; }
+.kpi-value { font-size: 18px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+.kpi-label { font-size: 10px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.section-card { margin: 8px 12px; background: var(--mt-surface); border: 1px solid var(--mt-border); border-radius: 10px; box-shadow: none; }
+.section-title { font-size: 11px; font-weight: 700; color: var(--mt-text-sub); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+
+/* Absences */
+.absence-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 12px; }
+.absence-item { background: var(--mt-bg); border: 1px solid var(--mt-border); border-radius: 8px; padding: 10px 4px; text-align: center; }
+.absence-val { font-size: 20px; font-weight: 700; }
+.absence-lbl { font-size: 10px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px; }
+.absence-sub { font-size: 9px; color: var(--mt-text-muted); margin-top: 2px; }
+
+.absence-progress { margin-top: 4px; }
+.progress-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--mt-text-sub); margin-bottom: 6px; }
+.progress-bar { height: 6px; background: var(--mt-border); border-radius: 3px; overflow: hidden; }
+.progress-fill-cp { height: 100%; background: var(--mt-orange); border-radius: 3px; transition: width 0.4s; }
+
+/* Engage */
+.engage-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--mt-border); }
+.engage-row:last-child { border-bottom: none; }
+.engage-label { flex: 1; font-size: 13px; color: var(--mt-text); }
+.engage-badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 12px; }
+.badge-ok { background: #1a4a2e; color: var(--mt-green); }
+.badge-warn { background: #3d2800; color: var(--mt-orange); }
+.badge-nc { background: #4d1010; color: var(--mt-red); }
+
+/* Contacts */
+.contact-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--mt-border); }
+.contact-row:last-child { border-bottom: none; }
+.contact-icon-wrap { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-role { font-size: 11px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.5px; }
+.contact-label { font-size: 13px; color: var(--mt-text); margin-top: 2px; }
+.contact-email { font-size: 11px; color: var(--mt-accent); margin-top: 2px; }
+
+/* Rappels */
+.remind-card { background: var(--mt-surface2); border-color: var(--mt-text-muted); }
+.rappel-row { display: flex; gap: 8px; margin-bottom: 6px; }
+.rappel-dot { color: var(--mt-accent); flex-shrink: 0; font-size: 18px; line-height: 1.3; }
+.rappel-text { font-size: 13px; color: var(--mt-text-sub); line-height: 1.5; }
+
+.doc-footer { text-align: center; font-size: 11px; color: var(--mt-text-muted); padding: 16px; }

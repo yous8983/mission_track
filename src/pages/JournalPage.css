@@ -1,0 +1,36 @@
+/* src/pages/JournalPage.css */
+.journal-content { --background: var(--mt-bg); }
+.no-mission-msg { text-align: center; color: var(--mt-text-muted); padding: 60px 32px; font-size: 16px; }
+
+.journal-header-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 16px 4px;
+}
+.journal-count { font-size: 12px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.6px; }
+.mission-tag { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 8px; }
+
+.journal-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 32px; text-align: center; }
+.empty-icon { font-size: 48px; margin-bottom: 16px; }
+.empty-title { font-size: 18px; font-weight: 700; color: var(--mt-text-muted); margin-bottom: 8px; }
+.empty-sub { font-size: 13px; color: var(--mt-text-muted); line-height: 1.5; }
+
+.journal-card { margin: 8px 12px; background: var(--mt-surface); border: 1px solid var(--mt-border); border-radius: 10px; box-shadow: none; }
+.journal-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.journal-date { font-size: 11px; color: var(--mt-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.journal-titre { font-size: 15px; font-weight: 700; color: var(--mt-text); margin-bottom: 6px; }
+.journal-detail { font-size: 13px; color: var(--mt-text-sub); line-height: 1.5; margin-bottom: 8px; }
+.journal-preuve {
+  display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--mt-green);
+  background: #1a4a2e; border: 1px solid #27ae60; border-radius: 6px; padding: 5px 10px;
+}
+
+/* Modal */
+.modal-content { --background: var(--mt-bg); padding: 16px; }
+.form-group { margin-bottom: 14px; }
+.form-label { display: block; font-size: 11px; color: var(--mt-text-sub); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
+.form-input {
+  width: 100%; background: var(--mt-surface); border: 1px solid var(--mt-text-muted); color: var(--mt-text);
+  border-radius: 8px; padding: 10px 12px; font-size: 14px; font-family: inherit; outline: none; -webkit-appearance: none;
+}
+.form-input:focus { border-color: var(--mt-accent); }
+.form-textarea { resize: vertical; min-height: 80px; }
