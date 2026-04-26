@@ -22,7 +22,7 @@ jobs:
       - run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - run: npx cap add android
       - run: npx cap sync android
-      - name: Copy icons into Android project
+      - name: Override icons AFTER cap sync
         run: |
           for density in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
             mkdir -p android/app/src/main/res/mipmap-$density
@@ -30,7 +30,10 @@ jobs:
                android/app/src/main/res/mipmap-$density/ic_launcher.png
             cp android-icons/mipmap-$density/ic_launcher_round.png \
                android/app/src/main/res/mipmap-$density/ic_launcher_round.png
+            cp android-icons/mipmap-$density/ic_launcher.png \
+               android/app/src/main/res/mipmap-$density/ic_launcher_foreground.png || true
           done
+          ls android/app/src/main/res/mipmap-xxxhdpi/
       - name: Build APK
         run: |
           chmod +x android/gradlew
