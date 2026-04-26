@@ -23,26 +23,22 @@ jobs:
       - run: npx cap add android
       - run: npx cap sync android
 
-      - name: Fix Gradle repositories
-        run: |
-          sed -i 's|mavenCentral()|mavenCentral()\n        google()|g' \
-            android/build.gradle || true
-          cat android/build.gradle
-
-      - name: Copy app icons
+      - name: Copy icons into Android project
         run: |
           for density in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
+            mkdir -p android/app/src/main/res/mipmap-$density
             cp android-icons/mipmap-$density/ic_launcher.png \
                android/app/src/main/res/mipmap-$density/ic_launcher.png
             cp android-icons/mipmap-$density/ic_launcher_round.png \
                android/app/src/main/res/mipmap-$density/ic_launcher_round.png
+            echo "Copied $density icons"
           done
+          ls android/app/src/main/res/mipmap-xxxhdpi/
 
       - name: Build APK
         run: |
           chmod +x android/gradlew
-          cd android && ./gradlew assembleDebug --no-daemon \
-            --refresh-dependencies
+          cd android && ./gradlew assembleDebug --no-daemon
 
       - uses: actions/upload-artifact@v4
         with:
